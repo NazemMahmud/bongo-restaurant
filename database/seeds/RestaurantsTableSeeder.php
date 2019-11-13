@@ -1,0 +1,172 @@
+<?php
+
+use Illuminate\Database\Seeder;
+use App\Restaurants;
+
+class RestaurantsTableSeeder extends Seeder
+{
+    /**
+     * Run the database seeds.
+     * @return void
+     */
+    public function run()
+    {
+        $restaurants = [
+            [
+                'name' => 'La Gondolina',
+                'branch' => '',
+                'phone' => '0641079539',
+                'email' => 'info@lagondolina.nl',
+                'logo' => '/nl/3/logo.png',
+                'address' => 'Karperweg',
+                'housenumber' => '3 hs',
+                'postcode' => '1075LA',
+                'city' => 'Amsterdam',
+                'latitude' => 52.3486912,
+                'longitude' => 4.8570568,
+                'url' => 'lagondolina',
+                'open' => 2,
+                'bestMatch' => 218,
+                'newestScore' => 1685,
+                'ratingAverage' => 9,
+                'popularity' => 91,
+                'averageProductPrice' => 10.93,
+                'deliveryCosts' => 6.57,
+                'minimumOrderAmount' => 6.57
+            ],
+            [
+                'name' => 'Adnamics',
+                'branch' => '',
+                'phone' => '0251 20 30 00',
+                'email' => 'martin.limburg@adnamics.nl',
+                'logo' => '/nl/P/logo.png',
+                'address' => 'Oranjestraat',
+                'housenumber' => '2',
+                'postcode' => '8888AA',
+                'city' => 'Teststad',
+                'latitude' => 52.022375,
+                'longitude' => 4.2183701,
+                'url' => 'bluesky',
+                'open' => 1,
+                'bestMatch' => 392,
+                'newestScore' => 2404,
+                'ratingAverage' => 0,
+                'popularity' => 9,
+                'averageProductPrice' => 25,
+                'deliveryCosts' => 1.28,
+                'minimumOrderAmount' => 1.28
+            ],
+            [
+                'name' => 'Papa',
+                'branch' => 'Wattstraat',
+                'phone' => '079-3434252',
+                'email' => '',
+                'logo' => '/nl/N1/logo.png',
+                'address' => 'Wattstraat',
+                'housenumber' => '26h',
+                'postcode' => '2723RC',
+                'city' => 'Zoetermeer',
+                'latitude' => 52.0596183,
+                'longitude' => 4.525853,
+                'url' => 'pizzeriagrillroompapaoud',
+                'open' => 1,
+                'bestMatch' => 138,
+                'newestScore' => 517,
+                'ratingAverage' => 0,
+                'popularity' => 68,
+                'averageProductPrice' => 25,
+                'deliveryCosts' => 9.64,
+                'minimumOrderAmount' => 9.64
+            ],
+            ['name' => 'Picobello',
+                'branch' => 'De Meern',
+                'phone' => '0684211778',
+                'email' => 'adham555555@hotmail.com',
+                'logo' => '/nl/NO/logo.png',
+                'address' => 'Damzicht',
+                'housenumber' => '18 B',
+                'postcode' => '3454PS',
+                'city' => 'De Meern',
+                'latitude' => 52.0760575,
+                'longitude' => 5.047988,
+                'url' => 'piramidedemeern',
+                'open' => 0,
+                'bestMatch' => 202,
+                'newestScore' => 2748,
+                'ratingAverage' => 4,
+                'popularity' => 81,
+                'averageProductPrice' => 8.19,
+                'deliveryCosts' => 7.68,
+                'minimumOrderAmount' => 7.68],
+            [
+                'name' => 'Bajwa II',
+                'branch' => '',
+                'phone' => '070-3901654',
+                'email' => '',
+                'logo' => '/nl/RP/logo.png',
+                'address' => 'Van Musschenbroekstraat',
+                'housenumber' => '259',
+                'postcode' => '2522AN',
+                'city' => '\'S Gravenhage',
+                'latitude' => 52.061385,
+                'longitude' => 4.3280063,
+                'url' => 'eethuisbajwaii',
+                'open' => 0,
+                'bestMatch' => 164,
+                'newestScore' => 1480,
+                'ratingAverage' => 0,
+                'popularity' => 121,
+                'averageProductPrice' => 25,
+                'deliveryCosts' => 1.45,
+                'minimumOrderAmount' => 1.45
+            ],
+            [
+                'name' => 'Pizzalijn',
+                'branch' => 'Den Haag',
+                'phone' => '070-3654838',
+                'email' => 'info@depizzalijn.nl',
+                'logo' => '/nl/R3/logo.png',
+                'address' => 'Newtonstraat',
+                'housenumber' => '35',
+                'postcode' => '2562KC',
+                'city' => 'Den Haag',
+                'latitude' => 52.076858,
+                'longitude' => 4.286602,
+                'url' => 'pizzalijndenhaagdenhaag',
+                'open' => 1,
+                'bestMatch' => 273,
+                'newestScore' => 2046,
+                'ratingAverage' => 5,
+                'popularity' => 99,
+                'averageProductPrice' => 12.74,
+                'deliveryCosts' => 9.81,
+                'minimumOrderAmount' => 9.81],
+            [
+                'name' => 'La Capanna',
+                'branch' => 'Amsterdam',
+                'phone' => '0621120355',
+                'email' => 'la-campanna06@outlook.com',
+                'logo' => '/nl/5NN/logo.png',
+                'address' => 'Eerste Helmersstraat',
+                'housenumber' => '251',
+                'postcode' => '1054DX',
+                'city' => 'Amsterdam',
+                'latitude' => 52.3609851,
+                'longitude' => 4.8653034,
+                'url' => 'lacapanna',
+                'open' => 1,
+                'bestMatch' => 242,
+                'newestScore' => 1957,
+                'ratingAverage' =>  7,
+                'popularity' => 122,
+                'averageProductPrice' => 9.32,
+                'deliveryCosts' => 4.5,
+                'minimumOrderAmount' => 4.5
+            ]
+        ];
+
+        foreach ($restaurants as $restaurant) {
+            Restaurants::create($restaurant);
+        }
+    }
+}
