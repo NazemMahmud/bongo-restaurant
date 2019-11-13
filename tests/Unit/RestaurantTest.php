@@ -20,6 +20,39 @@ class RestaurantTest extends TestCase
 
     public function testGettingAllRestaurantsByOpeningStateOrder()
     {
-       //
+        $response = $this->json('GET', '/api/restaurant-list');
+        $response->assertStatus(200);
+
+        $response->assertJsonStructure(
+            [
+                'data' => [
+                    [
+                        'id',
+                        'RestaurantName',
+                        'Branch',
+                        'Phone',
+                        'Email',
+                        'Logo',
+                        'Address',
+                        'HouseNumber',
+                        'Postcode',
+                        'City',
+                        'Latitude',
+                        'Longitude',
+                        'Url',
+                        'Open',
+                        'BestMatch',
+                        'NewestScore',
+                        'RatingAverage',
+                        'Popularity',
+                        'AverageProductPrice',
+                        'DeliveryCosts',
+                        'MinimumOrderAmount',
+                        'created_at',
+                        'updated_at'
+                    ]
+                ]
+            ]
+        );
     }
 }
