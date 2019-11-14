@@ -102,7 +102,10 @@ class RestaurantTest extends TestCase
     public function testSearchingRestaurantsByNameEmptyObject()
     {
         $response = $this->json('GET', '/api/search-restaurants', ["searchKey" => "king"]);
-        $response->assertStatus(400);
+        $response->assertStatus(400)
+            ->assertJson([
+                'message' => "No data found"
+            ]);
     }
 
     /**
@@ -110,7 +113,7 @@ class RestaurantTest extends TestCase
      */
     public function testSearchingRestaurantsByNameNotFound()
     {
-        $response = $this->json('GET', '/api/search-restaurants', [ "searchKey" => ""]);
+        $response = $this->json('GET', '/api/search-restaurants', ["searchKey" => ""]);
         $response->assertStatus(400);
     }
 
@@ -121,8 +124,8 @@ class RestaurantTest extends TestCase
     public function testGettingAllRestaurantsSortedByColumnName()
     {
         $response = $this->json('GET', '/api/sort-restaurants',
-            [ "sortBy" => "ratingAverage",
-              "orderBy" => ""
+            ["sortBy" => "ratingAverage",
+                "orderBy" => ""
             ]);
         $response->assertStatus(200)
             ->assertJsonStructure(
@@ -165,7 +168,7 @@ class RestaurantTest extends TestCase
     public function testGettingAllRestaurantsSortedByColumnNameWithOrderBy()
     {
         $response = $this->json('GET', '/api/sort-restaurants',
-            [ "sortBy" => "ratingAverage",
+            ["sortBy" => "ratingAverage",
                 "orderBy" => "desc"
             ]);
         $response->assertStatus(200)
