@@ -3,7 +3,7 @@
 I have developed this using Laravel 5.8.
 
 ### Prerequisites
-What things you need to install the software.
+To run this, you need to install,
 
 * Git.
 * PHP.
@@ -11,6 +11,19 @@ What things you need to install the software.
 * Laravel CLI.
 * A webserver ( I have used Apache).
 
+### Install
+Clone the git repository on your computer
+
+```$ git clone https://github.com/neoighodaro-articles/e-commerce-laravel-vue.git```
+
+
+You can also download the entire repository as a zip file and unpack in on your computer if you do not have git
+
+After cloning the application, you need to update the composer. 
+
+```
+$ composer update
+```
 
 ## About Laravel
 
