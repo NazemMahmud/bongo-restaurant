@@ -23,7 +23,7 @@ class Restaurants extends Model
      * @return mixed
      */
     function searchByRestaurantName($searchKey){
-        $resource = Restaurants::where('name', 'like', "%{$searchKey}%")->get();
+        $resource = Restaurants::where('name', 'like', "%{$searchKey}%")->orderBy('open', 'desc')->get();
         return $resource;
     }
 

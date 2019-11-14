@@ -19,8 +19,7 @@ class RestaurantController extends Controller
      * @return \Illuminate\Http\Resources\Json\AnonymousResourceCollection
      */
     public function getRestaurantByOpeningStateOrder(){
-        return RestaurantsResource::collection($this->restaurants->getRestaurantByOpeningState()) ;
-//        return $this->restaurants->getRestaurantByOpeningState();
+        return RestaurantsResource::collection($this->restaurants->getRestaurantByOpeningState());
     }
 
     /**
@@ -30,9 +29,9 @@ class RestaurantController extends Controller
      */
     public function searchByRestaurantName(Request $request){
         if(isset($request->searchKey))
-            return RestaurantsResource::collection($this->restaurants->searchByRestaurantName($request->searchKey)) ;
+            return RestaurantsResource::collection($this->restaurants->searchByRestaurantName($request->searchKey));
 
-        return response()->json(['error' => 'No Data Found'], 401);
+        return response()->json(['error' => 'No Search key value is provided. Bad request'], 400);
     }
 
     /**
