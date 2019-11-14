@@ -28,9 +28,11 @@ class RestaurantController extends Controller
      * @return \Illuminate\Http\JsonResponse|\Illuminate\Http\Resources\Json\AnonymousResourceCollection
      */
     public function searchByRestaurantName(Request $request){
-        if(isset($request->searchKey))
-            return RestaurantsResource::collection($this->restaurants->searchByRestaurantName($request->searchKey));
-
+        if(isset($request->searchKey)) {
+            return (count($this->restaurants->searchByRestaurantName($request->searchKey)) > 0) ?
+                RestaurantsResource::collection($this->restaurants->searchByRestaurantName($request->searchKey))
+                : response()->json(['message' => 'No data found'], 400);
+        }
         return response()->json(['error' => 'No Search key value is provided. Bad request'], 400);
     }
 

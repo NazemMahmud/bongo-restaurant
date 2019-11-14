@@ -96,6 +96,16 @@ class RestaurantTest extends TestCase
     }
 
     /**
+     * If searching by restaurant returns empty object,
+     * searching key is provided as a query parameter
+     */
+    public function testSearchingRestaurantsByNameEmptyObject()
+    {
+        $response = $this->json('GET', '/api/search-restaurants', ["searchKey" => "king"]);
+        $response->assertStatus(400);
+    }
+
+    /**
      * If searching key parameter is missing
      */
     public function testSearchingRestaurantsByNameNotFound()
