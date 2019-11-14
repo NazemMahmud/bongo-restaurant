@@ -34,7 +34,7 @@ $ composer update
 
   ```$ php artisan migrate```
 
-- I have provided the sql file for restaurants table data (.sql). Import that data into restaurants table
+- I have provided the sql file for restaurants table data (**restaurants.sql**). Import that data into restaurants table
 
 
 ### Run the application
@@ -47,20 +47,8 @@ $ composer update
   1. http://127.0.0.1:8000/api/restaurant-list to get all restaurants order by opening state default.
   2. http://127.0.0.1:8000/api/search-restaurants?searchKey=king to search restaurant by restaurant name
   3. http://127.0.0.1:8000/api/sort-restaurants?sortBy=ratingAverage&orderby=asc to sort restaurant based on column in restaurant table. If you provide empty value for **orderBy** paramter, it will sort in descending order by default.
-- Corresponding Controller, Model and Resources files are in ```app\Http\Controllers```, ```app\Http``` , ```app\Http\Resources``` directory respectively. You can check there how this API works. Necessary comments are added above the corresponding methods
+- Corresponding Controller, Model and Resources files are in **```app\Http\Controllers```**, **```app\Http```** , **```app\Http\Resources```** directory respectively. You can check there how this API works. Necessary comments are added above the corresponding methods
 
-
- 
-
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
-
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
 
 ## Unit Test
 
