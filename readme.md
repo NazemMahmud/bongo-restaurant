@@ -1,6 +1,6 @@
 # Building Restaurant API and corresponding test cases
 
-I have developed this using Laravel 5.8.
+I have developed this using Laravel 5.8 and MySQL.
 
 ### Prerequisites
 To run this, you need to install,
@@ -14,17 +14,33 @@ To run this, you need to install,
 ### Install
 Clone the git repository on your computer
 
-```$ git clone https://github.com/neoighodaro-articles/e-commerce-laravel-vue.git```
-
-
 You can also download the entire repository as a zip file and unpack in on your computer if you do not have git
 
-After cloning the application, you need to update the composer. 
+After cloning the application, you need to update the composer from the project directory. 
 
 ```
 $ composer update
 ```
 
+### Setup
+
+- Generate the application key
+
+  ```$ php artisan key:generate```
+  
+- In `.env` file, database configuration is given. Create the database. You may take the database name from DB_DATABASE value. Or, you may modify it as your own
+
+- Migrate the application
+
+  ```$ php artisan migrate```
+
+- I have provided the sql file for restaurants table data (.sql). Import that data into restaurants table
+
+
+### Run the application
+
+  ```$ php artisan serve```
+  
 ## About Laravel
 
 Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
